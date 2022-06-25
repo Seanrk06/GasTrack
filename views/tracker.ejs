@@ -21,14 +21,23 @@
       <li><a href="http://localhost:3000/help">Ways To Help</a></li>
     </ul>
     <div class="content-container">
-      <h1>Ways to Help</h1>
-      <h2 class="help-heading">Help The Gas Crisis</h2>
+      <h1>Gas Tracker</h1>
       <section>
-        <h3></h3>
+        <h3>Enter your location</h3>
         <p></p>
+        <form id="form">
+          <label for="city">Enter city: </label>
+          <input
+            id="city-input"
+            type="text"
+            name="city"
+            value="santa-barbara"
+          />
+          <input id="state-input" type="text" name="state" value="california" />
+          <button type="submit">Submit</button>
+        </form>
       </section>
 
-      <h2 class="help-heading">Help The Environment</h2>
       <section>
         <h3></h3>
         <p></p>
@@ -36,5 +45,18 @@
     </div>
     <ul class="footer"></ul>
   </body>
-  <script src="js/index.js"></script>
+  <script src="../public/js/webscraper.js">
+    import { scrapeGasPriceData} from "../public/js/webscraper.js"
+    function logSubmit(event) {
+      const city = document.getElementById('city-input').value;
+        const state = document.getElementById('state-input').value;
+        console.log(city);
+        scrapeGasPriceData(city, state)
+
+    }
+
+    const form = document.getElementById('form');
+    const log = document.getElementById('log');
+    form.addEventListener('submit', logSubmit);
+  </script>
 </html>

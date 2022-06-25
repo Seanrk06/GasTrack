@@ -1,3 +1,58 @@
 *{
-    background-color: #ffe252;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
 }
+
+body{
+    background-color: #FFD36E;
+}
+
+/* Header Styling */
+.header{
+    list-style-type: none;
+    margin: 0;
+    padding: 1vmax;
+    overflow: hidden;
+    background-color: #FF5D5D;
+}
+
+li {
+    display: inline;
+    padding: 2vmax;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+    font-size: 2vmax;
+}
+
+/*Content Styling */
+.content-container{
+    margin-top: 3vmax;
+}
+
+h1{
+    text-align: center;
+}
+
+.help-heading{
+    text-align: center;
+    margin-top: 3vmax;
+}
+
+section{
+    margin-top: 1vmax;
+    margin-left: 2vmax;
+    margin-right: 2vmax;
+}
+
+section p{
+    margin-top: 1vmax;
+    margin-left: 2vmax;
+    margin-right: 2vmax;
+}
+/*Footer Styling*/
