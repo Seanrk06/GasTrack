@@ -5,11 +5,12 @@ const fs = require("fs");
 // URL of the page we want to scrape - need to take user input
 const city = "santa-barbara";
 const state = "california";
-const url = `https://www.gasbuddy.com/gasprices/${state}/${city}`;
+// const url = `https://www.gasbuddy.com/gasprices/${state}/${city}`;
 // const url = "https://www.gasbuddy.com/gasprices/california/santa-barbara";
 
 // Async function which scrapes the data
-async function scrapeGasPriceData() {
+async function scrapeGasPriceData(city, state) {
+  const url = `https://www.gasbuddy.com/gasprices/${state}/${city}`;
   try {
     // Fetch HTML of the page we want to scrape
     const { data } = await axios.get(url);
@@ -57,7 +58,7 @@ async function scrapeGasPriceData() {
     console.dir(gasStations);
     // Write countries array in countries.json file
     fs.writeFile(
-      "gasStations.json",
+      "../.././data/gasStations.json",
       JSON.stringify(gasStations, null, 2),
       (err) => {
         if (err) {
@@ -72,4 +73,4 @@ async function scrapeGasPriceData() {
   }
 }
 // Invoke the above function
-scrapeGasPriceData();
+scrapeGasPriceData(city, state);
