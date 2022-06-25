@@ -56,3 +56,11 @@ section p{
     margin-right: 2vmax;
 }
 /*Footer Styling*/
+
+
+footer{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 10);
+}
