@@ -3,29 +3,30 @@
 const express = require("express");
 const app = express();
 
-
-app.use(express.static('public'))
-
-
+app.use(express.static("public"));
 
 app.use(express.json());
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", function(req, res){
-    res.render("home", {});
+app.get("/", function (req, res) {
+  res.render("home", {});
 });
 
-app.get("/about", function(req, res){
-    res.render("about", {}); 
+app.get("/about", function (req, res) {
+  res.render("about", {});
 });
 
-app.get("/help", function(req, res){
-    res.render("help", {}); 
+app.get("/help", function (req, res) {
+  res.render("help", {});
 });
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server started on port 3000.");
+app.get("/track", function (req, res) {
+  res.render("tracker", {});
+});
+
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Server started on port 3000.");
 });
