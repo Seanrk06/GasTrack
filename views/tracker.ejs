@@ -12,13 +12,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Gas Track - Ways To Help</title>
+    <title>Gas Track - Tracker</title>
   </head>
   <body>
+    <script>
+      import { scrapeGasPriceData } from "../public/js/webscraper.js";
+      function logSubmit(event) {
+        const city = document.getElementById("city-input").value;
+        const state = document.getElementById("state-input").value;
+        log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+        console.log("hello");
+
+        scrapeGasPriceData(city, state);
+      }
+
+      const form = document.getElementById("form");
+      const log = document.getElementById("log");
+      form.addEventListener("submit", logSubmit);
+    </script>
     <ul class="header">
-      <li><a href="http://localhost:3000/track">Track Gas</a></li>
-      <li><a href="http://localhost:3000/about">About</a></li>
-      <li><a href="http://localhost:3000/help">Ways To Help</a></li>
+      <li><a href="/track">Track Gas</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="/help">Ways To Help</a></li>
     </ul>
     <div class="content-container">
       <h1>Gas Tracker</h1>
@@ -26,18 +41,23 @@
         <h3>Enter your location</h3>
         <p></p>
         <form id="form">
-          <label for="city">Enter city: </label>
-          <input
-            id="city-input"
-            type="text"
-            name="city"
-            value="santa-barbara"
-          />
-          <input id="state-input" type="text" name="state" value="california" />
-          <button type="submit">Submit</button>
+          <label
+            >Enter city:
+            <input
+              id="city-input"
+              type="text"
+              name="city"
+              value="santa-barbara"
+          /></label>
+          <label
+            >Enter state:
+            <input id="state-input" type="text" name="state" value="california"
+          /></label>
+          <br /><br />
+          <button type="submit">Submit form</button>
         </form>
       </section>
-
+      <p id="log"></p>
       <section>
         <h3></h3>
         <p></p>
@@ -45,18 +65,4 @@
     </div>
     <ul class="footer"></ul>
   </body>
-  <script src="../public/js/webscraper.js">
-    import { scrapeGasPriceData} from "../public/js/webscraper.js"
-    function logSubmit(event) {
-      const city = document.getElementById('city-input').value;
-        const state = document.getElementById('state-input').value;
-        console.log(city);
-        scrapeGasPriceData(city, state)
-
-    }
-
-    const form = document.getElementById('form');
-    const log = document.getElementById('log');
-    form.addEventListener('submit', logSubmit);
-  </script>
 </html>
