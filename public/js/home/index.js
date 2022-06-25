@@ -1,52 +1,62 @@
-// jshint esversion: 6
-import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
-import {GLTFLoader} from 'THREE/examples/jsm/loaders/GLTFLoader.js';
-// import * as dat from 'dat.gui';
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import Stats from 'three/examples/jsm/libs/stats.module'
+// import { GUI } from 'three/examples/jsm/libs/dat.gui.module'
 
-const glftLoader = new GLTFLoader();
-glftLoader.load('')
+const scene = new THREE.Scene()
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, innerWidth/innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
+camera.position.z = 2
 
-renderer.setSize(innerWidth, innerHeight);
-renderer.setPixelRatio(devicePixelRatio); 
-document.body.appendChild(renderer.domElement);
+const renderer = new THREE.WebGLRenderer()
+renderer.setSize(window.innerWidth, window.innerHeight)
+document.body.appendChild(renderer.domElement)
 
-camera.position.z = 5; 
+const controls = new OrbitControls(camera, renderer.domElement)
 
+const geometry = new THREE.BoxGeometry()
+const material = new THREE.MeshBasicMaterial({
+    color: 0x00ff00,
+    wireframe: true,
+})
+const cube = new THREE.Mesh(geometry, material)
+scene.add(cube)
 
-// const planeGeometry = new THREE.PlaneGeometry(6, 6, 6, 6);
-// const planeMaterial = new THREE.MeshPhongMaterial({color: 0x89CFF0, side: THREE.DoubleSide, flatShading: THREE.FlatShading});
-// const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
-// scene.add(planeMesh);
-// const {array} = planeMesh.geometry.attributes.position;
-// for (let i = 0; i < array.length; i += 3) {
-//     const x = array[i];
-//     const y = array[i + 1];
-//     const z = array[i + 2];
-//     array[i+2] = z + Math.random()
-// }
+window.addEventListener(
+    'resize',
+    () => {
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        render()
+    },
+    false
+)
 
+const stats = Stats()
+document.body.appendChild(stats.dom)
 
-// const gui = new dat.GUI();
-// const world = {
-//     plane: {
-//         width: 10
-//     }
-// };
-// gui.add(world.plane, 'width', 1, 500);
+// const gui = new GUI()
+// const cubeFolder = gui.addFolder('Cube')
+// cubeFolder.add(cube.scale, 'x', -5, 5)
+// cubeFolder.add(cube.scale, 'y', -5, 5)
+// cubeFolder.add(cube.scale, 'z', -5, 5)
+// cubeFolder.open()
+// const cameraFolder = gui.addFolder('Camera')
+// cameraFolder.add(camera.position, 'z', 0, 10)
+// cameraFolder.open()
 
-
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(0,0, 1); //x y and z arguement
-scene.add(light);
-
-
-function animate (){  //creates an animation loop to constantly show object when it changes is
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera); //renders object
+function animate() {
+    requestAnimationFrame(animate)
+    cube.rotation.x += 0.01
+    cube.rotation.y += 0.01
+    controls.update()
+    render()
+    stats.update()
 }
 
-animate();
+function render() {
+    renderer.render(scene, camera)
+}
+
+animate()
