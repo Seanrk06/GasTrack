@@ -1,8 +1,12 @@
 //jshint esversion:6
 
 const express = require("express");
-
 const app = express();
+
+
+app.use(express.static('public'))
+
+
 
 app.use(express.json());
 
@@ -11,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
-    res.render("three", {});
+    res.render("home", {});
 });
 
 app.get("/about", function(req, res){
