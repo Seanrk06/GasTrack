@@ -44,7 +44,8 @@ app.post("/track", (req, res) => {
   response.city = city;
   response.state = state;
   webscraper.scrapeGasPriceData(city, state);
-  res.redirect("/track");
+  res.render("tracker", {});
+  res.sendFile(path.join(__dirname, "./data/gasStations.json"));
 });
 
 app.listen(process.env.PORT || 3000, function () {
