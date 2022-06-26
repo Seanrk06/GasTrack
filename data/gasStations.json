@@ -1,52 +1,52 @@
 [
   {
-    "name": "Speedway Express",
-    "price": "$6.05",
-    "address": "4069 State StSanta Barbara, CA"
+    "name": "Freestate",
+    "price": "$4.69",
+    "address": "949 Washington Blvd SLaurel, MD"
   },
   {
-    "name": "Conserv Fuel",
-    "price": "$6.05CASH",
-    "address": "150 S La Cumbre RdSanta Barbara, CA"
+    "name": "Crown",
+    "price": "$4.69CASH",
+    "address": "14982 Baltimore AveLaurel, MD"
   },
   {
-    "name": "Sinclair",
-    "price": "$6.07",
-    "address": "2234 De La Vina StSanta Barbara, CA"
+    "name": "Sunoco",
+    "price": "$4.75CASH",
+    "address": "311 WASHINGTON BLVD SLaurel, MD"
+  },
+  {
+    "name": "Royal Farms",
+    "price": "$4.75",
+    "address": "6901 Van Dusen RdLaurel, MD"
+  },
+  {
+    "name": "7-Eleven",
+    "price": "$4.79",
+    "address": "14651 Laurel Bowie RdLaurel, MD"
   },
   {
     "name": "Shell",
-    "price": "$6.09CASH",
-    "address": "3060 State StSanta Barbara, CA"
+    "price": "$4.89",
+    "address": "703 Washington Blvd SLaurel, MD"
   },
   {
-    "name": "Fuel Depot",
-    "price": "$6.11",
-    "address": "101 W Carrillo StSanta Barbara, CA"
+    "name": "Shell",
+    "price": "$4.95",
+    "address": "825 Gorman AveLaurel, MD"
   },
   {
-    "name": "Fuel Depot",
-    "price": "$6.11",
-    "address": "3898 State StSanta Barbara, CA"
+    "name": "Exxon",
+    "price": "$4.95",
+    "address": "14701 Baltimore AveLaurel, MD"
   },
   {
-    "name": "76",
-    "price": "$6.15",
-    "address": "1800 State StSanta Barbara, CA"
+    "name": "CITGO",
+    "price": "$4.95",
+    "address": "130 2nd StLaurel, MD"
   },
   {
-    "name": "Speedway",
-    "price": "$6.15",
-    "address": "231 N Milpas StSanta Barbara, CA"
-  },
-  {
-    "name": "Auto Fuels",
-    "price": "$6.15",
-    "address": "1502 San Andres StSanta Barbara, CA"
-  },
-  {
-    "name": "ARCO",
-    "price": "$6.16",
-    "address": "636 W Carrillo StSanta Barbara, CA"
+    "name": "Sunoco",
+    "price": "$4.99",
+    "address": "820 2nd St Laurel, MD"
   }
 ]
