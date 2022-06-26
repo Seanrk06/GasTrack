@@ -10,11 +10,6 @@
     "address": "4069 State StSanta Barbara, CA"
   },
   {
-    "name": "Conserv Fuel",
-    "price": "$6.05CASH",
-    "address": "150 S La Cumbre RdSanta Barbara, CA"
-  },
-  {
     "name": "Sinclair",
     "price": "$6.07",
     "address": "2234 De La Vina StSanta Barbara, CA"
@@ -28,6 +23,11 @@
     "name": "Santa Barbara Gas & Propane",
     "price": "$6.09",
     "address": "303 W Carrillo StSanta Barbara, CA"
+  },
+  {
+    "name": "Fuel Depot",
+    "price": "$6.11",
+    "address": "3898 State StSanta Barbara, CA"
   },
   {
     "name": "Fuel Depot",
