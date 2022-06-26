@@ -5,14 +5,14 @@
     "address": "8 S Milpas StSanta Barbara, CA"
   },
   {
-    "name": "Conserv Fuel",
-    "price": "$6.05CASH",
-    "address": "150 S La Cumbre RdSanta Barbara, CA"
-  },
-  {
     "name": "Speedway Express",
     "price": "$6.05",
     "address": "4069 State StSanta Barbara, CA"
+  },
+  {
+    "name": "Sinclair",
+    "price": "$6.07",
+    "address": "2234 De La Vina StSanta Barbara, CA"
   },
   {
     "name": "Shell",
@@ -33,11 +33,6 @@
     "name": "Fuel Depot",
     "price": "$6.11",
     "address": "101 W Carrillo StSanta Barbara, CA"
-  },
-  {
-    "name": "Auto Fuels",
-    "price": "$6.15",
-    "address": "1502 San Andres StSanta Barbara, CA"
   },
   {
     "name": "Speedway",
