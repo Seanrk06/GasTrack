@@ -11,15 +11,56 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
     </style>
-    <link rel="stylesheet" href="css/styles.css"> 
+    <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
     <title>Gas Track - About</title>
   </head>
   <body>
-    <ul class="header">
-    <li><a href="/track">Track Gas</a></li>
-    <li><a href="/">About</a></li>
-    <li><a href="/help">Ways To Help</a></li>
-    </ul>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <img src="assets/logo.png" alt="">
+            <span>
+              Gas Track
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/track">Gas Tracker </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/help">How to Help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"> About Us</a>
+                </li>
+                
+            </div>
+            
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
     <div class="content-container">
       <h1>About Us</h1>
       <section>

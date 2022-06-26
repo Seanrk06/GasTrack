@@ -1,0 +1,323 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+}
+
+.h1 {
+  text-align: center;
+}
+.content-container {
+  margin: 70px;
+}
+
+.layout_padding {
+  padding: 75px 0;
+}
+
+.layout_padding2 {
+  padding: 45px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 45px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 45px;
+}
+
+.layout_padding-top {
+  padding-top: 75px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 75px;
+}
+
+.custom_heading {
+  color: #030404;
+}
+
+.custom_heading span {
+  color: #21d7ff;
+}
+
+/*header section*/
+.hero_area {
+  height: 98vh;
+  position: relative;
+}
+
+.hero_area::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  background-color: #023b48;
+}
+
+.sub_page .hero_area {
+  height: auto;
+}
+
+.hero_area.sub_pages {
+  height: auto;
+}
+
+.header_section {
+  background-color: #f6f8f7;
+  padding-top: 15px;
+}
+
+.header_section .container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.header_section .nav_container {
+  margin: 0 auto;
+}
+
+.header_section .quote_btn-container a {
+  color: #434242;
+  text-transform: uppercase;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px 30px;
+  color: #434242;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: initial;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fafcfd;
+}
+
+.custom_nav-container .nav_search-btn {
+  background-image: url(../images/search-icon.png);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: none;
+}
+
+.navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar-brand img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.navbar-brand span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191919;
+  margin-top: 5px;
+}
+
+.custom_nav-container {
+  z-index: 99999;
+  padding: 5px 0;
+}
+
+.custom_nav-container .navbar-toggler {
+  outline: none;
+}
+
+.custom_nav-container .navbar-toggler .navbar-toggler-icon {
+  background-image: url();
+  background-size: 55px;
+}
+
+/*end header section*/
+/* slider section */
+.slider_section {
+  background-image: url(../assets/sunsetroad.jpeg);
+  padding: 6% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider_section .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider_detail-box h1 {
+  color: #ffffff;
+  font-size: 52px;
+}
+
+.slider_detail-box h1 span {
+  display: inline-block;
+  color: #434242;
+  font-weight: bold;
+}
+
+.slider_detail-box p {
+  color: #f6f8f7;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #023b48;
+  border: 1px solid #023b48;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.btn-1:hover {
+  background-color: transparent;
+  color: #023b48;
+}
+
+.slider_detail-box .btn-box .btn-2 {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #023b48;
+}
+
+.slider_detail-box .btn-box .btn-2:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.slider_img-box {
+  margin-right: 5%;
+}
+
+.slider_img-box img {
+  width: 100%;
+}
+
+.carousel-indicators {
+  bottom: -15%;
+}
+
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.carousel-indicators .active {
+  background-color: #010106;
+}
+
+.about_section {
+  background-image: url(../images/about-bg.png);
+  background-size: cover;
+}
+
+.about_section .row {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.about_section .img-box img {
+  width: 100%;
+}
+
+.about_section .detail-box p {
+  margin: 25px 0;
+}
+
+.about_section .detail-box a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #023b48;
+  border: 1px solid #023b48;
+  color: #ffffff;
+}
+
+.about_section .detail-box a:hover {
+  background-color: transparent;
+  color: #023b48;
+}
+
+
+
+/* footer section*/
+.footer_section {
+  background-color: #fbfdfd;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.footer_section p {
+  color: #292929;
+  margin: 0;
+  text-align: center;
+}
+
+.footer_section a {
+  color: #292929;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  margin: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}

@@ -5,6 +5,8 @@ const webscraper = require("./webscraper");
 
 const app = express();
 
+let data;
+
 // app.use('/build/', express.static(path.join(__dirname, '/node_modules/three/build')));
 // app.use('/jsm', express.static(path.join(__dirname + '/node_modules/three/examples/jsm')));
 
@@ -22,6 +24,9 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
+  res.render("index", {});
+});
+app.get("/about", function (req, res) {
   res.render("about", {});
 });
 
@@ -30,19 +35,19 @@ app.get("/help", function (req, res) {
 });
 
 app.get("/track", function (req, res) {
-  var gasData = require("./data/gasStations.json");
-  res.render("tracker", { data: gasData });
+  const city = "santa barbara";
+  const state = "california";
+  webscraper.scrapeGasPriceData(city, state);
+  gasData = require("./data/gasStations.json");
+  res.render("tracker", { data: gasData, city: city, state: state });
 });
 
-app.post("/track", (req, res) => {
-  const city = req.body.city.replace(" ", "-");
-  const state = req.body.state.replace(" ", "-");
-  response.city = city;
-  response.state = state;
+app.post("/track", async (req, res) => {
+  const city = req.body.city;
+  const state = req.body.state;
   webscraper.scrapeGasPriceData(city, state);
-  var gasData = require("./data/gasStations.json");
-  res.render("tracker", { data: gasData });
-  res.sendFile(path.join(__dirname, "./data/gasStations.json"));
+  gasData = require("./data/gasStations.json");
+  res.render("tracker", { data: gasData, city: city, state: state });
 });
 
 app.listen(process.env.PORT || 3000, function () {

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  
+
+  <title>Gas Track</title>
+
+  
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <img src="assets/logo.png" alt="">
+            <span>
+              Gas Track
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/track">Gas Tracker </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/help">How to Help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"> About Us</a>
+                </li>
+                
+            </div>
+            
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 offset-md-2">
+                  <div class="slider_detail-box">
+                    <h1>
+                      Gas Track
+                      
+                    </h1>
+                    <p>
+                      Finding the best gas prices near you so you and your family can focus on having fun on your roadtrip!
+                    </p>
+                    <div class="btn-box">
+                      <a href="/track" class="btn-1">
+                        Track Prices
+                      </a>
+                      <a href="/help" class="btn-2">
+                        Help Out
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="slider_img-box">
+                    <img src="assets/family.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="assets/gas.jpeg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h2 class="custom_heading">
+              About Gas Track
+            </h2>
+            <p>
+              The war in Ukraine that begun in February 2022 has many global impacts. One of these impacts is the increase of gas prices. With record-high prices, low income families are suffering the most. With summer vacations approaching, drivers also spend even more than through out the year. Our application ‘Gas Track’ helps families in need by providing them the information they need to make cost-effective decisions when purchasing gas.
+            </p>
+            <div>
+              <a href="/about">
+                About More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2022 All Rights Reserved By Gas Track
+      
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  
+</body>
+</body>
+
+</html>

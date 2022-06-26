@@ -1,10 +1,5 @@
 [
   {
-    "name": "Summit",
-    "price": "$5.99CASH",
-    "address": "8 S Milpas StSanta Barbara, CA"
-  },
-  {
     "name": "Speedway Express",
     "price": "$6.05",
     "address": "4069 State StSanta Barbara, CA"
@@ -25,9 +20,9 @@
     "address": "3060 State StSanta Barbara, CA"
   },
   {
-    "name": "Santa Barbara Gas & Propane",
-    "price": "$6.09",
-    "address": "303 W Carrillo StSanta Barbara, CA"
+    "name": "Fuel Depot",
+    "price": "$6.11",
+    "address": "101 W Carrillo StSanta Barbara, CA"
   },
   {
     "name": "Fuel Depot",
@@ -35,9 +30,9 @@
     "address": "3898 State StSanta Barbara, CA"
   },
   {
-    "name": "Fuel Depot",
-    "price": "$6.11",
-    "address": "101 W Carrillo StSanta Barbara, CA"
+    "name": "76",
+    "price": "$6.15",
+    "address": "1800 State StSanta Barbara, CA"
   },
   {
     "name": "Speedway",
@@ -45,8 +40,13 @@
     "address": "231 N Milpas StSanta Barbara, CA"
   },
   {
-    "name": "76",
+    "name": "Auto Fuels",
     "price": "$6.15",
-    "address": "1800 State StSanta Barbara, CA"
+    "address": "1502 San Andres StSanta Barbara, CA"
+  },
+  {
+    "name": "ARCO",
+    "price": "$6.16",
+    "address": "636 W Carrillo StSanta Barbara, CA"
   }
 ]
