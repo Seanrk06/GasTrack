@@ -27,6 +27,11 @@
   {
     "name": "Fuel Depot",
     "price": "$6.11",
+    "address": "3898 State StSanta Barbara, CA"
+  },
+  {
+    "name": "Fuel Depot",
+    "price": "$6.11",
     "address": "101 W Carrillo StSanta Barbara, CA"
   },
   {

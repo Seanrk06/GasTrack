@@ -30,8 +30,8 @@ app.get("/help", function (req, res) {
 });
 
 app.get("/track", function (req, res) {
-  console.log(response);
-  res.render("tracker", { Data: response });
+  var gasData = require("./data/gasStations.json");
+  res.render("tracker", { data: gasData });
 });
 
 app.post("/track", (req, res) => {
@@ -40,7 +40,9 @@ app.post("/track", (req, res) => {
   response.city = city;
   response.state = state;
   webscraper.scrapeGasPriceData(city, state);
-  res.redirect("/track");
+  var gasData = require("./data/gasStations.json");
+  res.render("tracker", { data: gasData });
+  res.sendFile(path.join(__dirname, "./data/gasStations.json"));
 });
 
 app.listen(process.env.PORT || 3000, function () {

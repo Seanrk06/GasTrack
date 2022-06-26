@@ -5,24 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
     </style>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Gas Track - Tracker</title>
   </head>
   <body>
-    <!-- <script type="importmap">
-      {
-        "imports": {
-          "axios": "../node_modules/axios/lib/axios.js",
-          "cheerio": "../node_modules/cheerio/lib/cheerio.js"
-        }
-      }
-    </script> -->
     <ul class="header">
       <li><a href="/track">Track Gas</a></li>
       <li><a href="/">About</a></li>
@@ -35,7 +30,7 @@
         <p></p>
         <form id="form" method="post" action="/track">
           <label
-            >Enter city:
+            >Enter city (eg: "los angeles"):
             <input
               id="city-input"
               type="text"
@@ -43,7 +38,7 @@
               value="santa barbara"
           /></label>
           <label
-            >Enter state:
+            >Enter state (eg: "california"):
             <input id="state-input" type="text" name="state" value="california"
           /></label>
           <br /><br />
@@ -54,6 +49,25 @@
       <section>
         <h3></h3>
         <p></p>
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% for(var i=0; i < data.length; i++) { %>
+            <tr>
+              <td><%= data[i].name %></td>
+              <td><%= data[i].address %></td>
+              <td><%= data[i].price %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
       </section>
     </div>
     <ul class="footer"></ul>
