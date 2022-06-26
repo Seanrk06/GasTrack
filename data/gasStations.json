@@ -5,9 +5,9 @@
     "address": "8 S Milpas StSanta Barbara, CA"
   },
   {
-    "name": "Fuel Depot",
-    "price": "$5.99",
-    "address": "2299 Las Positas RdSanta Barbara, CA"
+    "name": "Speedway Express",
+    "price": "$6.05",
+    "address": "4069 State StSanta Barbara, CA"
   },
   {
     "name": "Conserv Fuel",
@@ -35,14 +35,14 @@
     "address": "101 W Carrillo StSanta Barbara, CA"
   },
   {
-    "name": "76",
-    "price": "$6.15",
-    "address": "1800 State StSanta Barbara, CA"
-  },
-  {
     "name": "Speedway",
     "price": "$6.15",
     "address": "231 N Milpas StSanta Barbara, CA"
+  },
+  {
+    "name": "76",
+    "price": "$6.15",
+    "address": "1800 State StSanta Barbara, CA"
   },
   {
     "name": "ARCO",

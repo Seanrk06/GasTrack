@@ -58,7 +58,7 @@ async function scrapeGasPriceData(city, state) {
     console.dir(gasStations);
     // Write countries array in countries.json file
     fs.writeFile(
-      "../.././data/gasStations.json",
+      "./data/gasStations.json",
       JSON.stringify(gasStations, null, 2),
       (err) => {
         if (err) {
@@ -73,4 +73,6 @@ async function scrapeGasPriceData(city, state) {
   }
 }
 // Invoke the above function
-scrapeGasPriceData(city, state);
+// scrapeGasPriceData(city, state);
+
+exports.scrapeGasPriceData = scrapeGasPriceData;
