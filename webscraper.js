@@ -10,6 +10,8 @@ const state = "california";
 
 // Async function which scrapes the data
 async function scrapeGasPriceData(city, state) {
+  city = city.replace(" ", "-");
+  state = state.replace(" ", "-");
   const url = `https://www.gasbuddy.com/gasprices/${state}/${city}`;
   try {
     // Fetch HTML of the page we want to scrape

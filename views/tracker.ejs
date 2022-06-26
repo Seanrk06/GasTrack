@@ -14,15 +14,67 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
     </style>
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="../css/responsive.css" rel="stylesheet" />
     <title>Gas Track - Tracker</title>
   </head>
   <body>
-    <ul class="header">
-      <li><a href="/track">Track Gas</a></li>
-      <li><a href="/">About</a></li>
-      <li><a href="/help">Ways To Help</a></li>
-    </ul>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="/">
+            <img src="assets/logo.png" alt="" />
+            <span> Gas Track </span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              class="d-flex mx-auto flex-column flex-lg-row align-items-center"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/track">Gas Tracker </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/help">How to Help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about"> About Us</a>
+                </li>
+               
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
     <div class="content-container">
       <h1>Gas Tracker</h1>
       <section>
@@ -30,46 +82,36 @@
         <p></p>
         <form id="form" method="post" action="/track">
           <label
-            >Enter city (eg: "los angeles"):
-            <input
-              id="city-input"
-              type="text"
-              name="city"
-              value="santa barbara"
+            >City (eg: "los angeles"):
+            <input id="city-input" type="text" name="city" value="<%= city%>"
           /></label>
           <label
-            >Enter state (eg: "california"):
-            <input id="state-input" type="text" name="state" value="california"
+            >State (eg: "california"):
+            <input id="state-input" type="text" name="state" value="<%=state%>"
           /></label>
           <br /><br />
-          <button type="submit">Submit form</button>
+          <button type="submit" class="btn-1">Track Prices</button>
         </form>
       </section>
       <p id="log"></p>
-      <section>
-        <h3></h3>
-        <p></p>
-        <table class="table table-inverse">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Price</th>
-            </tr>
-          </thead>
 
-          <tbody>
-            <% for(var i=0; i < data.length; i++) { %>
-            <tr>
-              <td><%= data[i].name %></td>
-              <td><%= data[i].address %></td>
-              <td><%= data[i].price %></td>
-            </tr>
-            <% } %>
-          </tbody>
-        </table>
+      <section>
+        <h3>Cheapest Gas Stations in <%= city%>, <%=state%></h3>
+
+        <% for(var i=0; i < data.length; i++) { %>
+        <div class="card">
+          <h2><%= data[i].name %></h2>
+          <p><%= data[i].address %></p>
+          <h5><%= data[i].price %></h5>
+        </div>
+
+        <% } %>
       </section>
     </div>
-    <ul class="footer"></ul>
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <p>&copy; 2022 All Rights Reserved By Gas Track</p>
+    </section>
+    <!-- footer section -->
   </body>
 </html>
