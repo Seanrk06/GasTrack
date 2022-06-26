@@ -1,13 +1,13 @@
+
+
 *{
     margin: 0;
-    font-family: 'Mukta', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 1000;
+    font-family: 'Titan One', cursive;
 }
 
 body{
     background-color: #FFD36E;
+    min-height: 100vh;
 }
 
 /* Header Styling */
@@ -17,6 +17,7 @@ body{
     padding: 1vmax;
     overflow: hidden;
     background-color: #FF5D5D;
+    font-weight: 300;
 }
 
 li {
@@ -28,11 +29,13 @@ li a {
     color: black;
     text-decoration: none;
     font-size: 2vmax;
+    font-weight: 100;
 }
 
 /*Content Styling */
 .content-container{
     margin-top: 3vmax;
+    font-weight: 75;
 }
 
 h1{
@@ -45,22 +48,33 @@ h1{
 }
 
 section{
-    margin-top: 1vmax;
+    margin-top: 1.5vmax;
     margin-left: 2vmax;
     margin-right: 2vmax;
 }
 
 section p{
-    margin-top: 1vmax;
+    margin-top: 1.75vmax;
     margin-left: 2vmax;
     margin-right: 2vmax;
 }
 /*Footer Styling*/
-
-
 footer{
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 10);
+    
+    margin-top: 10%;
+    width: 100vw;
+    padding: 3%;
+
+}
+
+.icon{
+    background-color: white;
+}
+
+i{
+    background-color: white;
+    color: black;
+    width: 0;
+    height: 0;
 }
