@@ -15,21 +15,14 @@
     <title>Gas Track - Tracker</title>
   </head>
   <body>
-    <script>
-      import { scrapeGasPriceData } from "../public/js/webscraper.js";
-      function logSubmit(event) {
-        const city = document.getElementById("city-input").value;
-        const state = document.getElementById("state-input").value;
-        log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
-        console.log("hello");
-
-        scrapeGasPriceData(city, state);
+    <!-- <script type="importmap">
+      {
+        "imports": {
+          "axios": "../node_modules/axios/lib/axios.js",
+          "cheerio": "../node_modules/cheerio/lib/cheerio.js"
+        }
       }
-
-      const form = document.getElementById("form");
-      const log = document.getElementById("log");
-      form.addEventListener("submit", logSubmit);
-    </script>
+    </script> -->
     <ul class="header">
       <li><a href="/track">Track Gas</a></li>
       <li><a href="about">About</a></li>
@@ -40,14 +33,14 @@
       <section>
         <h3>Enter your location</h3>
         <p></p>
-        <form id="form">
+        <form id="form" method="post" action="/track">
           <label
             >Enter city:
             <input
               id="city-input"
               type="text"
               name="city"
-              value="santa-barbara"
+              value="santa barbara"
           /></label>
           <label
             >Enter state:

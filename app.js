@@ -1,7 +1,17 @@
 //jshint esversion:6
 
 const express = require("express");
+const webscraper = require("./webscraper");
+
 const app = express();
+
+// app.use('/build/', express.static(path.join(__dirname, '/node_modules/three/build')));
+// app.use('/jsm', express.static(path.join(__dirname + '/node_modules/three/examples/jsm')));
+
+const response = {
+  city: String,
+  state: String,
+};
 
 app.use(express.static("public"));
 
@@ -24,7 +34,17 @@ app.get("/help", function (req, res) {
 });
 
 app.get("/track", function (req, res) {
-  res.render("tracker", {});
+  console.log(response);
+  res.render("tracker", { Data: response });
+});
+
+app.post("/track", (req, res) => {
+  const city = req.body.city.replace(" ", "-");
+  const state = req.body.state.replace(" ", "-");
+  response.city = city;
+  response.state = state;
+  webscraper.scrapeGasPriceData(city, state);
+  res.redirect("/track");
 });
 
 app.listen(process.env.PORT || 3000, function () {
